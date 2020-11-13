@@ -147,8 +147,8 @@ elseif (lambda_min<=0) & (phiBar_f(-lambda_min,delta,Lambda,a_j)>0)
         e(i)=0;
       end  
       if found == 0
-        e(m+1) = 1;
-        u_min = e- P_parallel*P_parallel(i,1:end);
+        e(i+1) = 1;
+        u_min = e- P_parallel*P_parallel(i+1,1:end);
       end
       u_min = u_min/(norm(u_min));
       zstar = alpha*u_min;
